@@ -1,2 +1,5 @@
-# itmd562-week11
+# Emma Prager
+## ILLINOIS INSTITUTE OF TECHNOLOGY
+### ITMD 562 - Week 11 Assignment
+
 RESTful API
