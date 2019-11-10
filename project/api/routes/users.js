@@ -22,7 +22,7 @@ router.get('/:userID', (req, res, next) => {
 });
 
 router.patch('/:userID', (req, res, next) => {
-    const id = req.params.userId;
+    const id = req.params.userID;
     res.status(200).json({
         message: 'Handling PATCH requests to /users/{id}. Updated user',
         id: id
