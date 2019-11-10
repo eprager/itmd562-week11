@@ -1,8 +1,12 @@
 const express = require('express');
 const app = express();
+const morgan = require('morgan');
 
 const userRoutes = require('./api/routes/users');
 
+app.use(morgan('dev'));
+
+// Route to handle user requests
 app.use('/users', userRoutes);
 
 app.use((req, res, next) => {

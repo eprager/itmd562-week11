@@ -15,28 +15,25 @@ router.post('/', (req, res, next) => {
 
 router.get('/:userID', (req, res, next) => {
     const id = req.params.userID;
-    if (id === 'special') {
-        res.status(200).json({
-            message: 'You discovered the special ID',
-            id: id
-        });
-    } else {
-        res.status(200).json({
-            message: 'You passed a normal ID',
-            id: id
-        });
-    };
+    res.status(200).json({
+        message: 'Handling GET requests to /users/{id}',
+        id: id
+    });
 });
 
 router.patch('/:userID', (req, res, next) => {
+    const id = req.params.userId;
     res.status(200).json({
-        message: 'Updated user'
+        message: 'Handling PATCH requests to /users/{id}. Updated user',
+        id: id
     });
 });
 
 router.delete('/:userID', (req, res, next) => {
+    const id = req.params.userId;
     res.status(200).json({
-        message: 'Deleted user'
+        message: 'Handling DELETE requests to /users/{id}. Deleted user',
+        id: id
     });
 });
 
